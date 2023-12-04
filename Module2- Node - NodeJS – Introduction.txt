@@ -1,0 +1,36 @@
+						Node JS Assignment
+
+Module - 2: Node - NodeJS – Introduction
+
+Q1. 	What is Node.js? Where can you use it?
+ Node.js is a server-side JavaScript runtime that enables the execution of JavaScript code outside a web browser.
+ It utilizes the V8 JavaScript engine and is known for its non-blocking, event-driven architecture. 
+Node.js is commonly used to build scalable and high-performance network applications, such as web servers and APIs.
+ It's versatile and finds applications in various domains, including web development, real-time applications, and microservices architecture.
+
+Q2. Explain callback in Node.js.
+ In Node.js, a callback is a function passed as an argument to another function, which will be invoked at a later time, often upon completion of an asynchronous operation. 
+Eaxmple:
+const fs = require('fs');
+// Asynchronous file read operation with a callback
+fs.readFile('example.txt', 'utf8', function (err, data) {
+  if (err) {
+    console.error('Error reading file: ', err);
+  } else {
+    console.log('File content:', data);
+  }
+});
+console.log('Reading file asynchronously...');
+
+Q3. What are the advantages of using promises instead of callbacks?
+ Promises provide a cleaner and more readable syntax for handling asynchronous code compared to nested callbacks, making the code structure more linear and easier to understand.
+Promises simplify error management through the use of the '.catch()' method, allowing centralized error handling and avoiding the need to scatter error-handling logic throughout the code.
+Promises support method chaining with '.then()', facilitating a sequential and organized flow of asynchronous operations.
+
+Q4. What is NPM?
+ NPM (Node Package Manager) is the default package manager for Node.js, streamlining the installation and management of JavaScript libraries and tools. It provides a vast repository of open-source packages, making it easy for developers to integrate and share code across projects. NPM simplifies dependency management, allowing users to declare and install project dependencies effortlessly using simple commands like npm install.
+
+Q5. What are the modules in Node.js? Explain
+ In Node.js, modules are units of encapsulated code that help organize and structure a program's functionality. The CommonJS module system is used in Node.js, where each file is treated as a module, and code within a module is isolated from the rest of the application. Modules can include variables, functions, and classes, and their contents are scoped to the module by default.
+
+To use code from one module in another, the ‘require’ function is employed to import modules, and the ‘module.exports’ or ‘exports’ object is used to expose specific functionalities to other modules. This modular architecture facilitates code reuse, maintainability, and collaboration in Node.js applications by breaking down complex systems into manageable, independent components.
